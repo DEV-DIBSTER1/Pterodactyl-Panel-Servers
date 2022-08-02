@@ -8,7 +8,7 @@ const AsciiTable = require('ascii-table');
 const Configuration = require('./config.json');
 const { Agent } = require('http');
 const EndPoint = `/api/client`;
-const Authentication = {'auth': {'bearer': Configuration.BlueFoxHost.Token}};
+const Authentication = {'auth': {'bearer': Configuration.Host.Token}};
 AllPanelServers = [];
 
 async function GetPanelServers(Page){
@@ -18,7 +18,7 @@ async function GetPanelServers(Page){
         E = `${EndPoint}?page=${Page}`;
     };
 
-    Request(Configuration.BlueFoxHost.URL + E, Authentication, function (error, response, body) {
+    Request(Configuration.Host.URL + E, Authentication, function (error, response, body) {
         if(response.statusCode != 200) return;
         const JSON_Response = JSON.parse(body);
         JSON_Response.data.forEach(m => {
