@@ -1,0 +1,16 @@
+{
+  "name": "dibster-panel-servers",
+  "version": "1.0.0",
+  "description": "Gets information on DIBSTER's servers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DIBSTER",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "chalk": "^4.1.2",
+    "request": "^2.88.2"
+  }
+}
